@@ -556,9 +556,9 @@ export default async function decorate(block) {
   let rules = true;
   let form;
   if (formDef) {
-    if(formDef['fd:submit'] && formDef['fd:submit']['spreadsheet']){
-      const {actionName} = formDef['fd:submit'];
-      const {spreadsheetUrl} = formDef['fd:submit']['spreadsheet'];
+    if(formDef['properties']['fd:submit'] && formDef['properties']['fd:submit']['spreadsheet']){
+      const {actionName} = formDef['properties']['fd:submit'];
+      const {spreadsheetUrl} = formDef['properties']['fd:submit']['spreadsheet'];
     }else {
     const { actionName, spreadsheetUrl } = formDef?.properties || {};
     }
