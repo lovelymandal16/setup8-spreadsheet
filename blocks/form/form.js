@@ -562,7 +562,7 @@ export default async function decorate(block) {
     }else {
     const { actionName, spreadsheetUrl } = formDef?.properties || {};
     }
-    if (!formDef?.properties?.['fd:submit'] && actionName === 'spreadsheet' && spreadsheetUrl) {
+    if (formDef?.properties?.['fd:submit'] && actionName === 'spreadsheet' && spreadsheetUrl) {
       // Check if we're in an iframe and use parent window's path if available
       const iframePath = window.frameElement ? window.parent.location.pathname
         : window.location.pathname;
