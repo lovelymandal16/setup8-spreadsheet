@@ -1,5 +1,4 @@
 mountpoints:
   /:
-    url: "https://author-p133911-e1313536.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-forms/main"
-    type: "markup"
+    url: "https://author-p133911-e1313536.adobeaemcloud.com/bin/franklin.delivery/lovelymandal16/setup8-spreadsheet/main
     suffix: ".html"
