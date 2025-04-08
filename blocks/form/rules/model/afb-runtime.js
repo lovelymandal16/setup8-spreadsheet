@@ -3602,6 +3602,9 @@ class Form extends Container {
                 'submitMetadata': this.exportSubmitMetaData()
             };
             const contentType = payload?.save_as || payload?.submit_as;
+            if(context.form.action.includes('forms.adobe.com')){
+              contentType = 'application/json';
+            }
             submit(context, successEventName, failureEventName, contentType, payload?.data, formAction, metadata);
         }
     }
