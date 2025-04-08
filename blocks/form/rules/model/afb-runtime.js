@@ -3601,7 +3601,7 @@ class Form extends Container {
             const metadata = payload.metadata || {
                 'submitMetadata': this.exportSubmitMetaData()
             };
-            const contentType = payload?.save_as || payload?.submit_as;
+            let contentType = payload?.save_as || payload?.submit_as;
             if(context.form.action.includes('forms.adobe.com')){
               contentType = 'application/json';
             }
