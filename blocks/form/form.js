@@ -563,11 +563,11 @@ export default async function decorate(block) {
       actionName = formDef['properties']['fd:submit']['actionName'];
        spreadsheetUrl = formDef['properties']['fd:submit']['spreadsheet']['spreadsheetUrl'];
     }else {
-      actionName = '';
-   // actionName  = formDef?.properties['actionName'] || '';
+      actionName  = formDef?.properties['actionName'] || '';
       spreadsheetUrl = formDef?.properties['spreadsheetUrl'] || '';
     }
-    if (formDef?.properties?.['fd:submit'] && actionName === 'spreadsheet' && spreadsheetUrl) {
+    //formDef?.properties?.['fd:submit'] &&
+    if ( actionName === 'spreadsheet' && spreadsheetUrl) {
       // Check if we're in an iframe and use parent window's path if available
       const iframePath = window.frameElement ? window.parent.location.pathname
         : window.location.pathname;
