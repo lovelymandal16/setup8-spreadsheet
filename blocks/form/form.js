@@ -563,7 +563,8 @@ export default async function decorate(block) {
       actionName = formDef['properties']['fd:submit']['actionName'];
        spreadsheetUrl = formDef['properties']['fd:submit']['spreadsheet']['spreadsheetUrl'];
     }else {
-    actionName  = formDef?.properties['actionName'] || '';
+      actionName = '';
+   // actionName  = formDef?.properties['actionName'] || '';
       spreadsheetUrl = formDef?.properties['spreadsheetUrl'] || '';
     }
     if (formDef?.properties?.['fd:submit'] && actionName === 'spreadsheet' && spreadsheetUrl) {
